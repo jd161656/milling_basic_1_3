@@ -357,11 +357,11 @@ static void jog_z(float mm)
     ui_update_position();
 }
 
-static void move_to(float target_x, float target_y, float target_z)
+static void move_to(int target_x, int target_y, int target_z)
 {
-    float dx = target_x - machine.x;
-    float dy = target_y - machine.y;
-    float dz = target_z - machine.z;
+    int dx = target_x - machine.x;
+    int dy = target_y - machine.y;
+    int dz = target_z - machine.z;
 
     if (0 <= dx <= 400) jog_x(dx);
     if (0 <= dy <= 268) jog_y(dy);
